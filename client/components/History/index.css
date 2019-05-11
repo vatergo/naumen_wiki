@@ -1,0 +1,36 @@
+ul {
+    text-decoration: none;
+}
+
+.history-link {
+    
+    color: #798e98;
+}
+
+.content-light .history-link a {
+    transition: .4s;
+    color: #222731;
+}
+
+.content-dark .history-link a {
+    transition: .4s;
+    color: #fff;
+}
+
+.headline select {
+    float: right;
+    height: 25px;
+    border-radius: 2px;
+}
+
+.content-light .headline select  { 
+    border: 0.5px solid #d5dddf;
+    transition: .4s;
+}
+
+.content-dark .headline select  {
+    background: #272727;
+    border: 0.5px solid #616161;
+    transition: .4s;
+    color: #fff;
+}

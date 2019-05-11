@@ -1,0 +1,79 @@
+.headline h1 {
+    float: left;
+}
+
+.headline form {
+    float: right;
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.content .wiki-link {
+    margin-top: 20px;
+    display: inline-block;
+    color: #798e98;
+}
+
+.search-line {
+    height: 25px;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-button {
+    height: 25px;
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    background: #ccc;
+}
+
+.content-light .search-button:hover {
+    cursor: pointer;
+    background: #9b9b9b;
+}
+
+.content-light .search-line { 
+    border: 0.5px solid #d5dddf;
+    transition: .4s;
+}
+
+.content-light .search-button {
+    border: none;
+    transition: .4s;
+}
+
+.content-dark .search-line {
+    background: #272727;
+    border: 0.5px solid #616161;
+    transition: .4s;
+    color: #fff;
+}
+
+.content-dark .search-button:hover {
+    cursor: pointer;
+    background: #6d6d6d;
+}
+
+.content-dark .search-button {
+    background: #9b9b9b;
+    border: none;
+    transition: .4s;
+    color: #ffffff;
+}
+
+h5 {
+    margin: 0;
+    margin-top: 5px;
+    color: #798e98;
+    font-weight: 100;
+}
+
+.initial-info {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    text-indent: 30px;
+}
