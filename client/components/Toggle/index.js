@@ -6,7 +6,7 @@ export default class Toggle extends React.Component {
         return (
             <div className="toggle">
                 <label className="switch">
-                    <input type="checkbox" />
+                    {this.props.theme === 'dark' ? <input type="checkbox" defaultChecked /> : <input type="checkbox" />}
                     <div className="slider round" onClick={this.props.themeСhange}></div>
                 </label>
             </div>
