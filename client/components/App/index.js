@@ -14,7 +14,10 @@ export default class App extends React.Component {
             dark: 'light',
         };
         this.themeСhange = this.themeСhange.bind(this);
+        this.token = Math.random().toString(36).substr(2);
     }
+
+
 
     themeСhange() {
         if (this.state.dark === 'dark') {
@@ -36,9 +39,9 @@ export default class App extends React.Component {
         return (
             <div>
                 <Layout themeСhange={this.themeСhange} dark={this.state.dark}>
-                    <Route exact path='/' render={() => <Search dark={this.state.dark} />} />
+                    <Route exact path='/' render={() => <Search dark={this.state.dark} token={this.token} />} />
                     <Route path='/info' render={() => <Info dark={this.state.dark} />} />
-                    <Route path='/history' render={() => <History dark={this.state.dark} />} />
+                    <Route path='/history' render={() => <History dark={this.state.dark} token={this.token} />} />
                 </Layout>
             </div>
         );

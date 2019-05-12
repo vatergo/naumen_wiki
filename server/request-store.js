@@ -1,10 +1,11 @@
 import fetch from 'node-fetch';
 
 const storage = {};
-let history = [];
+let history = {};
 
-export function getAllRequests() {
-    let historyStorage = history.map(function (item, i) {
+export function getAllRequests(token) {
+    if (!history[token]) return [];
+    let historyStorage = history[token].map(function (item, i) {
         return {
             caption: item,
             id: i,
@@ -14,8 +15,9 @@ export function getAllRequests() {
     return historyStorage;
 }
 
-export async function addRequest(name) {
-    history.push(name);
+export async function addRequest(name, token) {
+    if (!history[token]) history[token] = [];
+    history[token].push(name);
     name = name.toLowerCase();
     if (!storage[name]) {
         let ruEn = 'ru';

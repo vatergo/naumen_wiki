@@ -8,7 +8,7 @@ const app = express();
 //app.use(express.static(__dirname.slice(0, -6) + '/public'));
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'origin, content-type, accept');
+    res.header('Access-Control-Allow-Headers', 'origin, content-type, accept, x-token');
     next();
 });
 
@@ -17,12 +17,14 @@ app.use(function (req, res, next) {
 });*/
 
 app.get('/requests', (req, res) => {
+    let token = req.get('X-Token')
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(storage.getAllRequests()));
+    res.send(JSON.stringify(storage.getAllRequests(token)));
 });
 
 app.get('/requests/:name', (req, res) => {
-    storage.addRequest(req.params.name).catch((msg) => console.log(msg)).then(data => res.send(data));
+    let token = req.get('X-Token')
+    storage.addRequest(req.params.name, token).catch((msg) => console.log(msg)).then(data => res.send(data));
 });
 
 const server = app.listen(8080, () => console.log('Server is up and running on port 8080'));

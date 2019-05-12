@@ -22,7 +22,7 @@ export default class Search extends React.Component {
             this.setState({
                 caption: 'Загрузка...'
             });
-            api.getRequest(caption)
+            api.getRequest(caption, this.props.token)
                 .then(data => this.setState({
                     caption: data.caption,
                     context: data.context,

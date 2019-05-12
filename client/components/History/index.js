@@ -14,7 +14,7 @@ export default class History extends React.Component {
     }
 
     componentWillMount() {
-        api.getAllRequests().then(data => {
+        api.getAllRequests(this.props.token).then(data => {
             this.setState({
                 history: data
             });
