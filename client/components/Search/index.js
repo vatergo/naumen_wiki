@@ -38,7 +38,7 @@ export default class Search extends React.Component {
 
     render() {
         return (
-            <div className={"content content-" + this.props.dark}>
+            <div className={"content content-" + this.props.theme}>
                 <div className="container">
                     <div className="headline clearfix">
                         <h1>{this.state.caption}</h1>

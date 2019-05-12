@@ -4,7 +4,7 @@ import './index.css';
 export default class Info extends React.Component {
     render() {
         return (
-            <div className={"content content-" + this.props.dark}>
+            <div className={"content content-" + this.props.theme}>
                 <div className="container">
                     <h1>Решение тестового задания</h1>
                     Приложение, с помощью которого можно искать тестовую информацию в Wikipedia.

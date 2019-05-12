@@ -6,7 +6,7 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div>
-                <Header themeСhange={this.props.themeСhange} dark={this.props.dark}/>
+                <Header themeСhange={this.props.themeСhange} dark={this.props.theme}/>
                 {this.props.children}
             </div>
         );

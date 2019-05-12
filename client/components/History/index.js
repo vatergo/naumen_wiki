@@ -41,7 +41,7 @@ export default class History extends React.Component {
             </li>;
         })
         return (
-            <div className={"content content-" + this.props.dark}>
+            <div className={"content content-" + this.props.theme}>
                 <div className="container">
                     <div className="headline clearfix">
                         <h1>История запросов</h1>
